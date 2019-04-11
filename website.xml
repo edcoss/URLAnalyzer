@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appcmd>
+    <SITE SITE.NAME="URLAnalyzer" SITE.ID="5" bindings="http/*:80:urlanalyzer.local" state="Started">
+        <site name="URLAnalyzer" id="5" serverAutoStart="true">
+            <bindings>
+                <binding protocol="http" bindingInformation="*:80:urlanalyzer.local" />
+            </bindings>
+            <limits />
+            <logFile>
+                <customFields>
+                </customFields>
+            </logFile>
+            <traceFailedRequestsLogging />
+            <hsts />
+            <applicationDefaults />
+            <virtualDirectoryDefaults />
+            <ftpServer>
+                <connections />
+                <security>
+                    <dataChannelSecurity />
+                    <commandFiltering>
+                    </commandFiltering>
+                    <ssl />
+                    <sslClientCertificates />
+                    <authentication>
+                        <anonymousAuthentication />
+                        <basicAuthentication />
+                        <clientCertAuthentication />
+                        <customAuthentication>
+                            <providers>
+                            </providers>
+                        </customAuthentication>
+                    </authentication>
+                    <customAuthorization>
+                        <provider />
+                    </customAuthorization>
+                </security>
+                <customFeatures>
+                    <providers>
+                    </providers>
+                </customFeatures>
+                <messages />
+                <fileHandling />
+                <firewallSupport />
+                <userIsolation>
+                    <activeDirectory />
+                </userIsolation>
+                <directoryBrowse />
+                <logFile />
+            </ftpServer>
+            <application path="/" applicationPool="URLAnalyzer">
+                <virtualDirectoryDefaults />
+                <virtualDirectory path="/" physicalPath="C:\Code\XCentium\Website" />
+            </application>
+        </site>
+    </SITE>
+</appcmd>
