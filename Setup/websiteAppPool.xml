@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appcmd>
+
+    <APPPOOL APPPOOL.NAME="URLAnalyzer" PipelineMode="Integrated" RuntimeVersion="v4.0" state="Started">
+
+        <add name="URLAnalyzer" autoStart="true" managedRuntimeVersion="v4.0">
+
+            <processModel identityType="NetworkService" />
+
+            <recycling>
+
+                <periodicRestart>
+
+                    <schedule>
+
+                    </schedule>
+
+                </periodicRestart>
+
+            </recycling>
+
+            <failure />
+
+            <cpu />
+
+            <environmentVariables>
+
+            </environmentVariables>
+
+        </add>
+
+    </APPPOOL>
+
+</appcmd>
