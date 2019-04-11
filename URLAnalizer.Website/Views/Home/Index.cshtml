@@ -1,0 +1,53 @@
+﻿@model URLAnalyzer.Models.APISettingsViewModel
+
+<div class="jumbotron row">
+    <div class="col-md-12">
+        <h1>URL Analyzer</h1>
+    </div>
+    <div class="col-md-12">
+        <p class="lead">Provide a URL, and scrap some data...</p>
+    </div>
+    <div class="col-md-12">
+        <input id="inputUrl" type="text" autocomplete="on" placeholder="i.e. https://www.sitecore.com" />
+    </div>
+    <div class="col-md-12">
+        <p><a id="scrapCTA" href="javascript:void(0)" data-url="@(Model.ApiUrlEndpoint + Model.ApiUrlRequestPath)" class="btn btn-primary btn-lg small-vertical-padding">Scrap!</a></p>
+        <div class="error-message" style="display: none;">Make sure you provided a URL, before scrapping!</div>
+        <div class="loader" style="display: none;"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 small-vertical-padding jumbotron">
+        <h4>Images found will be displayed here...</h4>
+        <div id="carouselTop">
+            You'll see a carousel of the images that page contains!'
+        </div>
+        <div id="carouselContainer" class="carousel slide" data-ride="carousel">
+            <ol id="carouselIndicators" class="carousel-indicators"></ol>
+            <div id="carouselItemsContainer" class="carousel-inner">
+            </div>
+            <a class="carousel-control-prev" href="#carouselContainer" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselContainer" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-12 small-vertical-padding jumbotron">
+        <h4>Total word count: </h4>
+        <p id="totalWordCountResult">
+            This space will contain the total word count of the URL you scrap!
+        </p>
+    </div>
+    <div class="col-md-12 small-vertical-padding jumbotron">
+        <div id="wordGraphTop">
+            <h4>In here you'll see a graph of the top 10 most used words!'</h4>
+        </div>
+        <div id="wordGraphContainer">
+        </div>
+    </div>
+</div>
